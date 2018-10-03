@@ -1,10 +1,32 @@
 .trello {
-    background:yellow;
+    background:coral;
     display:inline-block;
     margin: 10px;
     padding: 10px;
     width: 20vw;
     height: 20vw;
+    box-shadow: 10px 2px 5px;
+    border-radius: 5px;
+    text-align: center;
+
+    }
+    .columns{
+        display: inline-block;
+        width: 25vw;
+        vertical-align: top;
+    }
+
+    .textbox{
+        border-radius: 5px;
+        align-items: center;
+    }
+
+    .textsubmit{
+        margin-left: 4vw;
+    }
+
+    .maintitle{
+        display: inline-block;
     }
 
     

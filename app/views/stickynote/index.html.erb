@@ -1,13 +1,53 @@
-<h1>trello</h1>
+<h1 class= "maintitle">moth v dino</h1>
+<h2>dawn of trello</h2>
+<%= image_tag "logo.png", size: "350x150" %>
+
+<hr>
+
+
 <div class = "columns">
-    <% @stickynotes.each do |stickynote| %>
+<h3> To Do </h3>
+    <% @todonotes.each do |stickynote| %>
         <div class = "trello"><%= stickynote.body %></div>
     <% end %>
-</div>
+<div class= "textsubmit">
 <form action="/stickynote/index" method = "post">
     <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
-    <input type="text" name= "body" placeholder="note text"/ >
+    <input type="text" class= "textbox" name= "body" placeholder="note text"/ >
+    <input type="hidden" name="catid" value= "1">
     <input type="submit">
-</form>
+    
+</form></div>
+</div>
+
+<div class = "columns">
+<h3> Doing </h3>
+    <% @doingnotes.each do |stickynote| %>
+        <div class = "trello"><%= stickynote.body %></div>
+    <% end %>
+<div class= "textsubmit">
+<form action="/stickynote/index" method = "post">
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+    <input type="text" class= "textbox" name= "body" placeholder="note text"/ >
+    <input type="hidden" name="catid" value= "2">
+    <input type="submit">
+</form></div>
+</div>
+
+<div class = "columns">
+<h3> Done </h3>
+    <% @donenotes.each do |stickynote| %>
+        <div class = "trello"><%= stickynote.body %></div>
+    <% end %>
+<div class= "textsubmit">
+<form action="/stickynote/index" method = "post">
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+    <input type="text" class= "textbox" name= "body" placeholder="note text"/ >
+    <input type="hidden" name="catid" value= "3">
+    <input type="submit">
+</form></div>
+</div>
+
+
 
 
